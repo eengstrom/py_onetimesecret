@@ -62,7 +62,7 @@ class OneTimeSecret(object):
         self.key = api_key
         self.url = "https://%s/api/%s/%s" % (url, self.api_ver, "%s")
         self.opener = create_opener("https://%s/*" % url, username, api_key)
-        self.secret_link_url = "https://onetimesecret.com/secret/"
+        self.secret_link_url = "https://%s/secret/" % url
 
     @server_check
     def share(self, secret, passphrase=None, recipient=None, ttl=None):
